@@ -1,0 +1,290 @@
+.HomePage {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f5f5f5;
+}
+
+/* =========================
+    전체 레이아웃
+========================= */
+
+.Container {
+    width: 100%;
+    max-width: 1200px;
+
+    display: flex;
+    align-items: stretch;
+
+    background-color: white;
+
+    /* border: 1px solid pink; */
+    border-radius: 1.6rem;
+    overflow: hidden;
+
+    box-shadow: 0 0 65px rgba(255, 26, 114, 0.12);
+}
+
+/* =========================
+    오른쪽 전체 콘텐츠
+========================= */
+
+.Content {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+/* 중앙 콘텐츠 영역 */
+.Content_mid {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+    상단 영역
+========================= */
+
+.Header {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.Top {
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.Boxs {
+    flex-shrink: 0;
+
+    background:
+        linear-gradient(180deg, #fff8fb 0%, #ffffff 100%);
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* =========================
+    메인 게시판 영역
+========================= */
+
+.Main {
+    width: 100%;
+
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+.Board {
+    width: 100%;
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+/* =========================
+    오른쪽 사이드 영역
+    Category + RecentFeed 직접 배치
+========================= */
+
+.Board_info {
+    width: 26%;
+    min-width: 220px;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-self: flex-start;
+
+    padding: 0;
+    background-color: #fff8fb;
+    border-left: 1px solid var(--color-border);
+}
+
+/* Board_info 안의 첫 번째 컴포넌트: Category */
+.Board_info > :first-child {
+    width: 100%;
+    flex: none;
+}
+
+/* Board_info 안의 두 번째 컴포넌트: RecentFeed */
+.Board_info > :last-child {
+    width: 100%;
+    flex: 1;
+    border-top: 1px solid var(--color-border);
+}
+
+.detail_content {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+
+    background:
+        linear-gradient(180deg, #fff8fb 0%, #ffffff 100%);
+}
+
+/* =========================
+    태블릿 / 애매한 너비
+    769px ~ 1100px
+========================= */
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+    .HomePage {
+        padding: 28px;
+    }
+
+    .Container {
+        max-width: 100%;
+    }
+
+    .Content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .Content_mid {
+        width: 100%;
+    }
+
+    .Main {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .Board {
+        width: 100%;
+        flex: none;
+        min-height: 420px;
+
+        overflow-x: auto;
+        overflow-y: visible;
+    }
+
+    .Board_info {
+        width: 100%;
+        min-width: 0;
+
+        flex-direction: row;
+        align-self: stretch;
+
+        border-left: none;
+        border-top: 1px solid var(--color-border);
+    }
+
+    .Board_info > :first-child,
+    .Board_info > :last-child {
+        flex: 1;
+        min-width: 0;
+        border-top: none;
+    }
+
+    .Board_info > :last-child {
+        border-left: 1px solid var(--color-border);
+    }
+}
+
+
+/* =========================
+    모바일
+    768px 이하
+========================= */
+
+@media screen and (max-width: 768px) {
+    .HomePage {
+        padding: 0;
+        align-items: stretch;
+        background-color: white;
+    }
+
+    .Container {
+        width: 100%;
+        max-width: none;
+        min-height: 100vh;
+
+        flex-direction: column;
+        border: none;
+        border-radius: 0;
+    }
+
+    .Content {
+        width: 100%;
+        flex: 1;
+
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .Content_mid {
+        width: 100%;
+    }
+
+    .Header {
+        width: 100%;
+    }
+
+    .Top {
+        height: auto;
+        min-height: 72px;
+    }
+
+    .Main {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .Board {
+        width: 100%;
+        flex: none;
+        min-height: 420px;
+
+        overflow-x: auto;
+        overflow-y: visible;
+    }
+
+    .Board_info {
+        width: 100%;
+        min-width: 0;
+
+        flex-direction: column;
+        align-self: stretch;
+
+        border-left: none;
+        border-top: 1px solid var(--color-border);
+    }
+
+    .Board_info > :first-child,
+    .Board_info > :last-child {
+        width: 100%;
+        flex: none;
+    }
+
+    .Board_info > :last-child {
+        border-top: 1px solid var(--color-border);
+        border-left: none;
+    }
+}

@@ -1,0 +1,325 @@
+.Top {
+    width: 100%;
+    min-height: 80px;
+    padding: 1rem 1.2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    background:
+        linear-gradient(135deg, rgba(255, 240, 246, 0.9), rgba(243, 238, 255, 0.9));
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.Top_left {
+    min-width: 0;
+}
+
+.Top_label {
+    display: inline-block;
+    margin-bottom: .25rem;
+    padding: .18rem .55rem;
+
+    border-radius: 999px;
+    background-color: white;
+    color: var(--color-main);
+
+    font-size: .68rem;
+    font-weight: 700;
+}
+
+.Top_left h2 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+}
+
+.Top_right {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    flex-shrink: 0;
+}
+
+.Top_chip {
+    min-width: 6rem;
+    padding: .55rem .75rem;
+
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, .75);
+    border: 1px solid rgba(255, 255, 255, .9);
+
+    box-shadow: 0 8px 20px rgba(255, 122, 174, 0.1);
+}
+
+.Top_chip_label {
+    display: block;
+    margin-bottom: .15rem;
+
+    font-size: .65rem;
+    color: var(--color-text-sub);
+}
+
+.Top_chip strong {
+    font-size: .9rem;
+    color: var(--color-text-main);
+}
+
+.Top_chip.mood strong {
+    color: var(--color-main);
+}
+
+.Top_search {
+    position: relative;
+    flex: 1;
+    max-width: 320px;
+    min-width: 180px;
+}
+
+.Top_search input {
+    width: 100%;
+    height: 2.7rem;
+
+    padding: 0 2.6rem 0 1rem;
+
+    border: 1px solid rgba(255, 122, 174, 0.18);
+    border-radius: 999px;
+    outline: none;
+
+    background-color: rgba(255, 255, 255, 0.78);
+    color: var(--color-text-main);
+
+    font-size: .85rem;
+
+    box-shadow: 0 8px 20px rgba(255, 122, 174, 0.08);
+    transition: .2s;
+}
+
+.Top_search input::placeholder {
+    color: var(--color-text-sub);
+}
+
+.Top_search input:focus {
+    border-color: var(--color-main);
+    background-color: white;
+    box-shadow: 0 10px 24px rgba(255, 122, 174, 0.16);
+}
+
+.Top_search_icon {
+    position: absolute;
+    right: .9rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-size: .9rem;
+    opacity: .75;
+}
+
+.Top_chip.dday {
+    position: relative;
+    padding-right: 2.2rem;
+}
+
+.Top_calendar_button {
+    position: absolute;
+    right: .45rem;
+    bottom: .38rem;
+
+    width: 1.35rem;
+    height: 1.35rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 999px;
+
+    background-color: rgba(255, 255, 255, 0.85);
+    color: var(--color-main);
+
+    font-size: .72rem;
+
+    cursor: pointer;
+    transition: .18s;
+}
+
+.Top_calendar_button:hover {
+    transform: translateY(-1px);
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(255, 122, 174, 0.16);
+}
+
+.Top_date_picker {
+    position: absolute;
+    top: calc(100% + .45rem);
+    right: 0;
+    z-index: 50;
+
+    width: 12.5rem;
+    padding: .75rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: .9rem;
+
+    background-color: white;
+
+    box-shadow: 0 14px 32px rgba(255, 122, 174, 0.18);
+}
+
+.Top_date_picker label {
+    display: block;
+
+    margin-bottom: .4rem;
+
+    color: var(--color-text-sub);
+
+    font-size: .68rem;
+    font-weight: 800;
+}
+
+.Top_date_picker input {
+    width: 100%;
+    height: 2rem;
+    padding: 0 .55rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: .65rem;
+    outline: none;
+
+    color: var(--color-text-main);
+    font-size: .75rem;
+}
+
+.Top_date_picker input:focus {
+    border-color: var(--color-main);
+    box-shadow: 0 0 0 3px rgba(255, 122, 174, 0.13);
+}
+
+.Top_chip.mood {
+    position: relative;
+    padding-right: 2.2rem;
+}
+
+.Top_mood_button {
+    position: absolute;
+    right: .45rem;
+    bottom: .38rem;
+
+    width: 1.35rem;
+    height: 1.35rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 999px;
+
+    background-color: rgba(255, 255, 255, 0.85);
+    color: var(--color-main);
+
+    font-size: .72rem;
+
+    cursor: pointer;
+    transition: .18s;
+}
+
+.Top_mood_button:hover {
+    transform: translateY(-1px);
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(255, 122, 174, 0.16);
+}
+
+.Top_mood_picker {
+    position: absolute;
+    top: calc(100% + .45rem);
+    right: 0;
+    z-index: 100;
+
+    width: 11rem;
+    padding: .75rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: .9rem;
+
+    background-color: white;
+
+    box-shadow: 0 14px 32px rgba(255, 122, 174, 0.18);
+}
+
+.Top_mood_picker label {
+    display: block;
+
+    margin-bottom: .4rem;
+
+    color: var(--color-text-sub);
+
+    font-size: .68rem;
+    font-weight: 800;
+}
+
+.Top_mood_select {
+    width: 100%;
+    height: 2rem;
+
+    padding: 0 .55rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: .65rem;
+    outline: none;
+
+    background-color: white;
+    color: var(--color-text-main);
+
+    font-size: .75rem;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.Top_mood_select:focus {
+    border-color: var(--color-main);
+    box-shadow: 0 0 0 3px rgba(255, 122, 174, 0.13);
+}
+
+/* 모바일 */
+@media screen and (max-width: 768px) {
+    .Top {
+        min-height: auto;
+        padding: .9rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Top_right {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .6rem;
+    }
+
+    .Top_chip {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .Top_left h2 {
+        font-size: 1.05rem;
+    }
+
+    .Top_search {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        order: 3;
+    }
+
+    .Top_search input {
+        height: 2.55rem;
+        font-size: .8rem;
+    }
+}

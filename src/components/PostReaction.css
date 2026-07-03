@@ -1,0 +1,246 @@
+
+.PostDetail_reaction_box {
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--color-main-light);
+}
+
+.PostDetail_reaction_box p {
+    margin-bottom: .7rem;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.Reaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    flex-wrap: wrap;
+    min-width: 0;
+}
+
+.Reaction .word {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+
+    flex: 1;
+    min-width: 0;
+}
+
+.Reaction .word p {
+    margin: 0;
+    padding: 0;
+
+    flex-shrink: 0;
+
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+
+    white-space: nowrap;
+}
+
+.Reaction .word form {
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+
+    flex: 1;
+    min-width: 0;
+}
+
+.Reaction .word form input:first-child {
+    min-width: 0;
+    height: 2.1rem;
+    padding: 0 .8rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    outline: none;
+
+    background-color: white;
+    color: var(--color-text-main);
+
+    font-size: .82rem;
+
+    transition: .2s;
+}
+
+.Reaction .word form input:first-child:focus {
+    border-color: var(--color-main);
+    box-shadow: 0 0 0 3px rgba(255, 122, 174, 0.14);
+}
+
+.Reaction .word form input:last-child {
+    flex-shrink: 0;
+    height: 2.1rem;
+    padding: 0 .85rem;
+
+    border: none;
+    border-radius: 999px;
+
+    background-color: var(--color-main);
+    color: white;
+
+    font-size: .78rem;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+.Reaction .word form input:last-child:hover {
+    background-color: var(--color-main-hover);
+    transform: translateY(-1px);
+}
+
+.Reaction .word form input:last-child:hover {
+    background-color: var(--color-main-hover);
+    transform: translateY(-1px);
+}
+
+.Reaction_buttons {
+    display: flex;
+    gap: .5rem;
+}
+
+.Reaction_buttons button {
+    width: 2.4rem;
+    height: 2.4rem;
+    border: none;
+    border-radius: 999px;
+    background-color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.Reaction_buttons button:hover {
+    transform: translateY(-2px);
+    background-color: var(--color-main-light);
+}
+
+.PostDetail_actions {
+    margin-top: 1rem;
+}
+
+.Back_button {
+    padding: .55rem 1rem;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--color-main);
+    color: white;
+    font-size: .85rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.Back_button:hover {
+    background-color: var(--color-main-hover);
+}
+
+.PostDetail_empty {
+    margin-bottom: 1rem;
+    color: var(--color-text-sub);
+}
+
+.Reaction_buttons button.active {
+    background-color: var(--color-main);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.Reaction_log_box {
+    margin-top: 1rem;
+    padding: .9rem;
+    border-radius: .9rem;
+    background-color: white;
+}
+
+.Reaction_log_title {
+    margin-bottom: .6rem;
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+.Reaction_log_list {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.Reaction_log_item {
+    display: grid;
+    grid-template-columns: 5rem 4rem 1fr 7rem;
+    align-items: center;
+    gap: .4rem;
+
+    padding: .55rem .7rem;
+    border-radius: .7rem;
+    background-color: var(--color-main-light);
+    font-size: .8rem;
+}
+
+.Reaction_log_word {
+    min-width: 0;
+
+    color: var(--color-text-main);
+    font-size: .78rem;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.Reaction_log_name {
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+.Reaction_log_reaction {
+    text-align: center;
+    color: var(--color-main);
+    font-weight: 700;
+}
+
+.Reaction_log_time {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: .15rem;
+
+    text-align: right;
+    color: var(--color-text-sub);
+    font-size: .72rem;
+    line-height: 1.25;
+}
+
+.Reaction_log_time span {
+    display: block;
+}
+
+@media screen and (max-width: 720px) {
+    .Reaction {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .Reaction_buttons {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .Reaction .word {
+        width: 100%;
+        align-items: flex-start;
+        gap: .45rem;
+    }
+
+    .Reaction .word form {
+        width: 100%;
+    }
+}

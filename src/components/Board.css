@@ -1,0 +1,364 @@
+:root {
+    --color-main: #ff7aae;
+    --color-main-hover: #f25f9c;
+    --color-main-light: #fff0f6;
+
+    --color-sub: #a78bfa;
+    --color-sub-light: #f3eeff;
+
+    --color-bg-soft: #fff8fb;
+    --color-card: #ffffff;
+
+    --color-text-main: #33272d;
+    --color-text-sub: #8a747d;
+
+    --color-border: #f0dde6;
+    --color-border-strong: #e8c7d5;
+
+    --color-heart: #ff5c8a;
+}
+
+
+.Board_wrap {
+    width: 100%;
+    min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: .85rem 1.15rem 1rem;
+
+    border-radius: 1.2rem;
+    background-color: var(--color-card);
+    color: var(--color-text-main);
+}
+
+.Board_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    padding: .4rem .2rem 1rem;
+    flex-shrink: 0;
+}
+
+.Board_title h2 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+}
+
+.Board_title button {
+    padding: .5rem .9rem;
+
+    border: none;
+    border-radius: 999px;
+
+    background-color: var(--color-main);
+    color: white;
+
+    font-size: .85rem;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: .2s;
+    white-space: nowrap;
+}
+
+.Board_title button:hover {
+    background-color: var(--color-main-hover);
+    transform: translateY(-1px);
+}
+
+
+.Board_list_wrap {
+    width: 100%;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+
+.Board_list {
+    width: 100%;
+
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    border-top: 1px solid var(--color-border-strong);
+    border-radius: .8rem;
+    overflow: hidden;
+}
+
+.Board_list thead {
+    background-color: var(--color-main-light);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.Board_list th,
+.Board_list td {
+    height: 2.5rem;
+    padding: 0 .55rem;
+
+    border-bottom: 1px solid var(--color-border);
+
+    font-size: .82rem;
+    vertical-align: middle;
+}
+
+.Board_list th {
+    text-align: center;
+    font-weight: 800;
+    color: var(--color-text-main);
+}
+
+.Board_list td {
+    text-align: center;
+    color: var(--color-text-sub);
+}
+
+.col_no {
+    width: 8%;
+}
+
+.col_title {
+    width: 40%;
+    text-align: left !important;
+}
+
+.col_writer {
+    width: 12%;
+}
+
+.col_date {
+    width: 16%;
+}
+
+.col_mood {
+    width: 12%;
+}
+
+.col_reaction {
+    width: 12%;
+}
+
+.post_item {
+    cursor: pointer;
+    transition: .15s;
+}
+
+.post_item:hover {
+    background-color: var(--color-bg-soft);
+}
+
+.post_item:hover .post_title {
+    color: var(--color-main);
+}
+
+.post_badge {
+    display: inline-block;
+    margin-right: .4rem;
+    padding: .15rem .45rem;
+
+    border-radius: 999px;
+
+    background-color: var(--color-sub-light);
+    color: var(--color-sub);
+
+    font-size: .72rem;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+.post_title {
+    display: inline-block;
+    max-width: calc(100% - 4.5rem);
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    vertical-align: middle;
+    color: var(--color-text-main);
+}
+
+.reaction_badge {
+    min-width: 2.2rem;
+    height: 1.45rem;
+    padding: 0 .45rem;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 999px;
+
+    background-color: var(--color-main-light);
+    color: var(--color-main);
+
+    font-size: .78rem;
+    font-weight: 800;
+}
+
+.reaction_badge.read {
+    background-color: #f7f2f5;
+    color: var(--color-text-sub);
+
+    font-size: .6rem;
+    font-weight: 600;
+}
+
+.empty_result {
+    height: 12rem;
+
+    text-align: center !important;
+    color: var(--color-text-sub);
+
+    font-size: .9rem;
+}
+
+.Pagination {
+    margin-top: auto;
+    padding-top: .9rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .35rem;
+
+    flex-shrink: 0;
+}
+
+.Pagination button {
+    min-width: 2rem;
+    height: 2rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+
+    background-color: white;
+    color: var(--color-text-sub);
+
+    font-size: .8rem;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+.Pagination button:hover:not(:disabled) {
+    background-color: var(--color-main-light);
+    color: var(--color-main);
+}
+
+.Pagination button.active {
+    background-color: var(--color-main);
+    border-color: var(--color-main);
+    color: white;
+
+    font-weight: 800;
+}
+
+.Pagination button:disabled {
+    opacity: .35;
+    cursor: default;
+}
+
+.post_badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 3rem;
+    height: 1.35rem;
+    padding: 0 .55rem;
+
+    border-radius: 999px;
+
+    font-size: .68rem;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.post_badge.date {
+    background-color: rgba(255, 159, 190, 0.18);
+    color: #ff6f9d;
+}
+
+.post_badge.daily {
+    background-color: rgba(167, 139, 250, 0.18);
+    color: #8b6ee8;
+}
+
+.post_badge.heart {
+    background-color: rgba(123, 201, 111, 0.18);
+    color: #4FA443;
+}
+
+.post_badge.travel {
+    background-color: rgba(103, 198, 255, 0.18);
+    color: #3caee8;
+}
+
+.post_badge.promise {
+    background-color: rgba(246, 183, 60, 0.2);
+    color: #d99612;
+}
+
+.post_badge.all {
+    background-color: var(--color-main-light);
+    color: var(--color-main);
+}
+
+@media screen and (max-width: 1100px) {
+    .Board_list {
+        min-width: 450px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Board_wrap {
+        min-height: 420px;
+        padding: .9rem;
+        border-radius: 1rem;
+    }
+
+    .Board_title {
+        padding-bottom: .8rem;
+    }
+
+    .Board_title h2 {
+        font-size: 1.1rem;
+    }
+
+    .Board_title button {
+        padding: .45rem .75rem;
+        font-size: .78rem;
+    }
+
+    .Board_list th,
+    .Board_list td {
+        height: 2.35rem;
+        padding: 0 .45rem;
+        font-size: .76rem;
+    }
+
+    .post_badge {
+        font-size: .68rem;
+    }
+
+    .reaction_badge {
+        min-width: 2rem;
+        height: 1.35rem;
+        font-size: .72rem;
+    }
+
+    .Pagination button {
+        min-width: 1.85rem;
+        height: 1.85rem;
+        font-size: .74rem;
+    }
+}

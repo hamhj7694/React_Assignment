@@ -1,0 +1,31 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+  list-style: none;
+}
+
+/* ----------- */
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+}
+
+body{
+    font-size: 10px;
+}
+
+html{
+    height: 100%; /* 이 친구가 가장 최상위 부모! */
+}

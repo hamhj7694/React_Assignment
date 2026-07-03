@@ -1,0 +1,408 @@
+.PostDetail_wrap {
+    width: 95%;
+    min-height: 95%;
+    margin: auto;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+/* 왼쪽 상세 영역 */
+.PostDetail_card {
+    flex: 1;
+    min-width: 0;
+
+    padding: 1.5rem;
+
+    border-radius: 1.2rem;
+
+    background-color: var(--color-card);
+    color: var(--color-text-main);
+
+    box-shadow: 0 12px 32px rgba(255, 122, 174, 0.06);
+}
+
+/* 오른쪽 채팅 영역 */
+.Chat {
+    width: 38%;
+    min-width: 280px;
+    height: 100%;
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* ------------------------------
+    상세 헤더
+------------------------------ */
+
+.PostDetail_header {
+    margin-bottom: 1rem;
+}
+
+.PostDetail_category {
+    display: inline-block;
+
+    margin-bottom: .6rem;
+    padding: .2rem .6rem;
+
+    border-radius: 999px;
+
+    background-color: var(--color-sub-light);
+    color: var(--color-sub);
+
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.PostDetail_header h2 {
+    margin: 0;
+
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+/* ------------------------------
+    메타 정보
+------------------------------ */
+
+.PostDetail_meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem 1.2rem;
+
+    padding-bottom: 1rem;
+
+    border-bottom: 1px solid var(--color-border);
+
+    color: var(--color-text-sub);
+
+    font-size: .85rem;
+}
+
+.PostDetail_meta strong {
+    color: var(--color-main);
+}
+
+/* ------------------------------
+    본문
+------------------------------ */
+
+.PostDetail_content {
+    min-height: 14rem;
+    padding: 1.5rem 0;
+
+    line-height: 1.8;
+
+    font-size: .95rem;
+    color: var(--color-text-main);
+}
+
+.PostDetail_content p {
+    margin: 0 0 .65rem;
+}
+
+/* ------------------------------
+    이미지
+------------------------------ */
+
+.PostDetail_images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: .7rem;
+
+    margin-bottom: 1rem;
+}
+
+.PostDetail_image_item {
+    aspect-ratio: 1 / 1;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    border-radius: .9rem;
+    border: 1px solid var(--color-border);
+
+    background-color: var(--color-bg-soft);
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.PostDetail_image_item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 122, 174, 0.12);
+}
+
+.PostDetail_image_item img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.PostDetail_image_item img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+/* ------------------------------
+    수정 모드
+------------------------------ */
+
+.PostDetail_edit_group {
+    margin-bottom: 1rem;
+}
+
+.PostDetail_edit_group label,
+.PostDetail_edit_content label {
+    display: block;
+
+    margin-bottom: .45rem;
+
+    color: var(--color-text-main);
+
+    font-size: .82rem;
+    font-weight: 800;
+}
+
+.PostDetail_edit_title,
+.PostDetail_edit_content textarea,
+.PostDetail_mood_edit select {
+    width: 100%;
+
+    border: 1px solid var(--color-border);
+    border-radius: .9rem;
+    outline: none;
+
+    background-color: white;
+    color: var(--color-text-main);
+
+    font-size: .85rem;
+
+    transition: .2s;
+}
+
+.PostDetail_edit_title {
+    height: 2.5rem;
+    padding: 0 .85rem;
+}
+
+.PostDetail_edit_title:focus,
+.PostDetail_edit_content textarea:focus,
+.PostDetail_mood_edit select:focus {
+    border-color: var(--color-main);
+    box-shadow: 0 0 0 3px rgba(255, 122, 174, 0.13);
+}
+
+.PostDetail_chip_group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+}
+
+.PostDetail_chip {
+    height: 2rem;
+    padding: 0 .8rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+
+    background-color: white;
+    color: var(--color-text-sub);
+
+    font-size: .76rem;
+    font-weight: 800;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+.PostDetail_chip:hover {
+    background-color: var(--color-main-light);
+    color: var(--color-main);
+}
+
+.PostDetail_chip.active {
+    border-color: transparent;
+
+    background: linear-gradient(135deg, #ff7aae 0%, #a78bfa 100%);
+    color: white;
+}
+
+.PostDetail_mood_edit select {
+    width: auto;
+    min-width: 6rem;
+    height: 2rem;
+    padding: 0 .65rem;
+
+    margin-left: .25rem;
+}
+
+.PostDetail_edit_content {
+    margin-top: 1rem;
+    padding: 1.2rem 0;
+}
+
+.PostDetail_edit_content textarea {
+    min-height: 180px;
+    padding: .85rem;
+
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.PostDetail_edit_count {
+    margin-top: .35rem;
+
+    text-align: right;
+
+    color: var(--color-text-sub);
+
+    font-size: .72rem;
+}
+
+/* ------------------------------
+    하단 액션
+------------------------------ */
+
+.PostDetail_actions {
+    margin-top: 1rem;
+
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+.Back_button,
+.PostDetail_edit_button,
+.PostDetail_delete_button,
+.PostDetail_save_button,
+.PostDetail_cancel_button {
+    padding: .55rem 1rem;
+
+    border: none;
+    border-radius: 999px;
+
+    font-size: .85rem;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+.Back_button {
+    background-color: var(--color-main);
+    color: white;
+}
+
+.Back_button:hover {
+    background-color: var(--color-main-hover);
+}
+
+.PostDetail_edit_button {
+    background-color: var(--color-main-light);
+    color: var(--color-main);
+}
+
+.PostDetail_edit_button:hover {
+    background-color: var(--color-main);
+    color: white;
+}
+
+.PostDetail_delete_button {
+    background-color: #fff0f3;
+    color: #ff4f78;
+}
+
+.PostDetail_delete_button:hover {
+    background-color: #ff4f78;
+    color: white;
+}
+
+.PostDetail_save_button {
+    background-color: var(--color-main);
+    color: white;
+}
+
+.PostDetail_save_button:hover {
+    background-color: var(--color-main-hover);
+}
+
+.PostDetail_cancel_button {
+    background-color: #f7f2f5;
+    color: var(--color-text-sub);
+}
+
+.PostDetail_cancel_button:hover {
+    background-color: #efe3ea;
+}
+
+.PostDetail_empty {
+    margin-bottom: 1rem;
+    color: var(--color-text-sub);
+}
+
+/* ------------------------------
+    모바일 대응
+------------------------------ */
+
+@media screen and (max-width: 768px) {
+    .PostDetail_wrap {
+        width: 100%;
+        min-height: 100%;
+        padding: .8rem;
+
+        flex-direction: column;
+    }
+
+    .PostDetail_card {
+        width: 100%;
+        padding: 1.2rem;
+    }
+
+    .Chat {
+        width: 100%;
+        min-width: 0;
+        height: 320px;
+        padding: 1.2rem;
+    }
+
+    .PostDetail_header h2 {
+        font-size: 1.3rem;
+    }
+
+    .PostDetail_meta {
+        gap: .5rem .8rem;
+        font-size: .8rem;
+    }
+
+    .PostDetail_content {
+        min-height: 10rem;
+        padding: 1.2rem 0;
+        font-size: .9rem;
+    }
+
+    .PostDetail_actions {
+        align-items: stretch;
+    }
+
+    .Back_button,
+    .PostDetail_edit_button,
+    .PostDetail_delete_button,
+    .PostDetail_save_button,
+    .PostDetail_cancel_button {
+        flex: 1;
+    }
+}
