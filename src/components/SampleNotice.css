@@ -1,0 +1,16 @@
+.SampleNotice {
+    margin-top: 24px;
+    padding: 12px 14px;
+
+    border-radius: 10px;
+    background-color: #f5f5f5;
+
+    color: #666;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.SampleNotice p {
+    margin: 0;
+}

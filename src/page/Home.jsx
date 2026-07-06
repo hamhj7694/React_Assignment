@@ -7,10 +7,16 @@ import SummaryCards from "../components/SummaryCards"
 import Category from "../components/Category"
 import RecentFeed from "../components/RecentFeed"
 
-function Home({ children, detailMode = false, posts = [], setPosts }){
+function Home({ 
+    children, 
+    detailMode = false, 
+    posts = [], 
+    setPosts,
+    chats = [],
+    setChats
+}){
     const [searchKeyword, setSearchKeyword] = useState("")
     const [selectedCategory, setSelectedCategory] = useState("전체")
-    const [chatList, setChatList] = useState([])
 
     return(
         <div className="HomePage">
@@ -23,6 +29,8 @@ function Home({ children, detailMode = false, posts = [], setPosts }){
                             ? cloneElement(children, {
                                 posts,
                                 setPosts,
+                                chats,
+                                setChats,
                             })
                             : children
                         }
@@ -39,7 +47,7 @@ function Home({ children, detailMode = false, posts = [], setPosts }){
                                 <div className="Boxs">
                                     <SummaryCards 
                                         posts={posts}
-                                        chatList={chatList} 
+                                        chatList={chats} 
                                     />
                                 </div>
                             </div>
@@ -52,6 +60,8 @@ function Home({ children, detailMode = false, posts = [], setPosts }){
                                             selectedCategory,
                                             posts,
                                             setPosts,
+                                            chats,
+                                            setChats,
                                         }) 
                                         : children
                                     }
@@ -67,8 +77,8 @@ function Home({ children, detailMode = false, posts = [], setPosts }){
                             />
 
                             <RecentFeed 
-                                chatList={chatList}
-                                setChatList={setChatList}
+                                chatList={chats}
+                                setChatList={setChats}
                             />
                         </div>
                     </div>

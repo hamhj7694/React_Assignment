@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom"
 import "./Menu.css"
 
 const menuItems = [
-    { id: 1, name: "우리 홈", path: "/", icon: "🏠" },
-    { id: 2, name: "포스트", path: "/", icon: "📓" },
-    { id: 3, name: "갤러리", path: "/gallery", icon: "🖼️" },
-    { id: 4, name: "캘린더", path: "/calendar", icon: "📅" },
-    { id: 5, name: "채팅", path: "/chat", icon: "💬" },
-    { id: 6, name: "설정", path: "/setting", icon: "⚙️" },
+    { id: 1, name: "우리 홈", path: "/home", icon: "🏠" },
+    { id: 2, name: "포스트", path: "/home", icon: "📓" },
+    { id: 3, name: "갤러리", /*path: "/gallery",*/ icon: "🖼️" },
+    { id: 4, name: "캘린더", /*path: "/calendar",*/ icon: "📅" },
+    { id: 5, name: "채팅", /*path: "/chat",*/ icon: "💬" },
+    { id: 6, name: "설정", /*path: "/setting",*/ icon: "⚙️" },
 ]
 
 const todayMessages = [

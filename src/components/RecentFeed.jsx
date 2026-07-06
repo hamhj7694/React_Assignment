@@ -7,6 +7,7 @@ function RecentFeed({ chatList, setChatList }){
     const [editingChatId, setEditingChatId] = useState(null)
 
     const chatBodyRef = useRef(null)
+    const chatInputRef = useRef(null)
 
     useEffect(() => {
         if(!chatBodyRef.current) return
@@ -53,6 +54,12 @@ function RecentFeed({ chatList, setChatList }){
         setEditingChatId(chat.id)
         setChatText(chat.text)
         setSelectedChatId(null)
+
+        setTimeout(() => {
+            if(chatInputRef.current){
+                chatInputRef.current.focus()
+            }
+        }, 0)
     }
 
     const handleEditCancel = () => {
@@ -170,8 +177,21 @@ function RecentFeed({ chatList, setChatList }){
                 ))}
             </div>
 
+            {editingChatId && (
+                <div className="RecentChat_editStatus">
+                    <span>수정중</span>
+                    <button 
+                        type="button"
+                        onClick={handleEditCancel}
+                    >
+                        취소
+                    </button>
+                </div>
+            )}
+
             <form className="RecentChat_form" onSubmit={handleSubmit}>
                 <input 
+                    ref={chatInputRef}
                     type="text"
                     value={chatText}
                     onChange={(e) => setChatText(e.target.value)}
