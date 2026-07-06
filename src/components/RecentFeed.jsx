@@ -98,6 +98,7 @@ function RecentFeed({ chatList, setChatList }){
             user: "나",
             text: trimmedText,
             time: getNowTime(),
+            edited: false,
         }
 
         setChatList((prevChatList) => [
@@ -177,41 +178,34 @@ function RecentFeed({ chatList, setChatList }){
                 ))}
             </div>
 
-            {editingChatId && (
-                <div className="RecentChat_editStatus">
-                    <span>수정중</span>
-                    <button 
-                        type="button"
-                        onClick={handleEditCancel}
-                    >
-                        취소
-                    </button>
-                </div>
-            )}
-
-            <form className="RecentChat_form" onSubmit={handleSubmit}>
-                <input 
-                    ref={chatInputRef}
-                    type="text"
-                    value={chatText}
-                    onChange={(e) => setChatText(e.target.value)}
-                    placeholder={editingChatId ? "메시지 수정 중" : "메시지 입력"}
-                />
-
+            <div className="RecentChat_inputWrap">
                 {editingChatId && (
-                    <button 
-                        type="button"
-                        className="cancel"
-                        onClick={handleEditCancel}
-                    >
-                        취소
-                    </button>
+                    <div className="RecentChat_editStatus">
+                        <span>수정중</span>
+
+                        <button 
+                            type="button"
+                            onClick={handleEditCancel}
+                        >
+                            취소
+                        </button>
+                    </div>
                 )}
 
-                <button type="submit">
-                    {editingChatId ? "수정" : "보내기"}
-                </button>
-            </form>
+                <form className="RecentChat_form" onSubmit={handleSubmit}>
+                    <input 
+                        ref={chatInputRef}
+                        type="text"
+                        value={chatText}
+                        onChange={(e) => setChatText(e.target.value)}
+                        placeholder={editingChatId ? "수정할 메시지 입력" : "메시지 입력"}
+                    />
+
+                    <button type="submit">
+                        {editingChatId ? "수정" : "보내기"}
+                    </button>
+                </form>
+            </div>
         </div>
     )
 }

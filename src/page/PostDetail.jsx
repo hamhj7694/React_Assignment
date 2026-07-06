@@ -67,7 +67,7 @@ function PostDetail({ posts = [], setPosts }){
                     <button 
                         type="button" 
                         className="Back_button"
-                        onClick={() => navigate("/")}
+                        onClick={() => navigate("/Home")}
                     >
                         목록으로 돌아가기
                     </button>
@@ -357,7 +357,7 @@ function PostDetail({ posts = [], setPosts }){
             prevPosts.filter((item) => item.id !== post.id)
         ))
 
-        navigate("/")
+        navigate("/Home")
     }
 
     return(
@@ -531,7 +531,7 @@ function PostDetail({ posts = [], setPosts }){
                         <button 
                             type="button" 
                             className="Back_button"
-                            onClick={() => navigate("/")}
+                            onClick={() => navigate("/Home")}
                         >
                             목록으로 돌아가기
                         </button>

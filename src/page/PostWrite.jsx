@@ -215,7 +215,7 @@ function PostWrite({ setPosts }){
         }
 
         alert("기억이 저장됐어!")
-        navigate("/")
+        navigate("/Home")
     }
 
     return(
@@ -285,7 +285,7 @@ function PostWrite({ setPosts }){
                     <button
                         type="button"
                         className="PostWrite_cancel"
-                        onClick={() => navigate("/")}
+                        onClick={() => navigate("/Home")}
                     >
                         취소
                     </button>

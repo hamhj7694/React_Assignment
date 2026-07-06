@@ -296,6 +296,43 @@
     cursor: pointer;
 }
 
+.RecentChat_inputWrap {
+    position: relative;
+}
+
+.RecentChat_editStatus {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(100% + 8px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 7px 10px;
+
+    border-radius: 10px;
+    background-color: #fff0f5;
+
+    color: #ff6f9d;
+    font-size: 12px;
+    font-weight: 700;
+
+    z-index: 5;
+}
+
+.RecentChat_editStatus button {
+    border: none;
+    background: none;
+
+    color: #ff6f9d;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
 /* =========================
     태블릿
 ========================= */
