@@ -118,8 +118,8 @@ function Board({ searchKeyword = "", selectedCategory = "전체", posts = [] }){
                             <th className="col_title">기억 조각</th>
                             <th className="col_writer">쓴이</th>
                             <th className="col_date">날짜</th>
-                            <th className="col_mood">기분</th>
-                            <th className="col_reaction">반응</th>
+                            <th className="col_mood">쓴 기분</th>
+                            <th className="col_reaction">읽은 반응</th>
                         </tr>
                     </thead>
 
