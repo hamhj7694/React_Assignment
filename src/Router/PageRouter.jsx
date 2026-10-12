@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 
-import Login from "../page/Login"
 import Signup from "../page/Signup"
 import CoupleConnect from "../page/CoupleConnect"
 import CreateCoupleCode from "../page/CreateCoupleCode"
@@ -58,7 +57,7 @@ function PageRouter(){
     }, [chats])
 
     return(
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
             <Routes>
                 {/* 로그인 / 회원가입 / 커플 연결 샘플 페이지 */}
                 <Route path="/" element={<Navigate to="/home" replace />} />
