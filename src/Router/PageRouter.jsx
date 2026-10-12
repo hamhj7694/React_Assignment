@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 
 import Login from "../page/Login"
 import Signup from "../page/Signup"
@@ -61,7 +61,7 @@ function PageRouter(){
         <BrowserRouter>
             <Routes>
                 {/* 로그인 / 회원가입 / 커플 연결 샘플 페이지 */}
-                <Route path="/" element={<Login />} />
+                <Route path="/" element={<Navigate to="/home" replace />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/couple-connect" element={<CoupleConnect />} />
                 <Route path="/create-code" element={<CreateCoupleCode />} />
