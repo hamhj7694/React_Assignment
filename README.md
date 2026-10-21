@@ -6,10 +6,9 @@
 
 **2026.08 · 개인 프로젝트 · 서비스 기획 / UI·UX 설계 / React Frontend 구현**
 
-**🌐 [CoupleLog 배포 서비스 체험하기](https://hamhj7694.github.io/React_Assignment/)** · **[📖 상세 Notion 포트폴리오](https://app.notion.com/p/3f4c753ff28a8084bfcdfd2675825036)**
+**🌐 [CoupleLog 배포 서비스 체험하기](https://hamhj7694.github.io/React_Assignment/)** · **[📖 상세 Notion 포트폴리오](https://app.notion.com/p/400c753ff28a812ea1aeebd63f015ad3)**
 
-> [!IMPORTANT]
-> **Frontend Prototype입니다.** 게시글·반응·채팅은 현재 브라우저의 `localStorage`에 저장됩니다. 로그인·회원가입·커플 코드 연결은 **화면 이동을 보여주는 시연용 UI**이며 실제 사용자 인증, 서버 DB, 커플 간 데이터 공유·실시간 동기화는 구현되지 않았습니다. 개인 기록이나 사진을 영구 보관하는 운영 서비스로 사용하지 마세요.
+> **현재 구현 범위:** React 기반 프론트엔드 프로토타입으로, 게시글·반응·채팅은 브라우저 `localStorage`에서 관리합니다. 로그인·회원가입·커플 코드 화면은 UI 흐름이며, 서버 인증·DB·사용자 간 실시간 동기화는 후속 확장 항목입니다.
 
 ---
 
